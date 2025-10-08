@@ -2,6 +2,7 @@ import { Search } from "lucide-react";
 import React, { useState } from "react";
 import useApps from "../hooks/useApps";
 import AppCard from "../components/appCard";
+import { Link } from "react-router";
 
 const Apps = () => {
   const [search, setSearch] = useState("");
@@ -42,8 +43,8 @@ const Apps = () => {
             ))}
           </div>
         ) : (
-          <div className="text-5xl font-bold flex justify-center items-center">
-            <p>App Not Found</p>
+          <div className="text-5xl font-bold flex  justify-center items-center">
+            <p>No App Found</p>
           </div>
         )}
       </div>
