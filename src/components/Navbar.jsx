@@ -69,7 +69,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <Link
-          to={"https://github.com/nasim-ferdous/react-project-app-store"}
+          to={"https://github.com/nasim-ferdous"}
           className="btn text-white bg-gradient-to-r from-[#632ee3] to-[#9f62f2]"
         >
           <img src={gitLogo} alt="" />

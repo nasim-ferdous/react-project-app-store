@@ -1,0 +1,290 @@
+[
+  {
+    "image": "https://i.ibb.co.com/vMY0bBZ/task-flow.webp",
+    "title": "TaskFlow",
+    "companyName": "FlowTech Inc",
+    "id": 1,
+    "description": "TaskFlow helps you organize your day like a pro. Create to-do lists, set deadlines, and track progress with smart reminders. The app offers collaborative boards, visual analytics, and cross-device syncing to keep you and your team productive anywhere, anytime.",
+    "size": 42,
+    "reviews": 1200,
+    "ratingAvg": 4.5,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 600 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/rRbR2VmL/fitTrack.webp",
+    "title": "FitTrack",
+    "companyName": "Healthify Labs",
+    "id": 2,
+    "description": "FitTrack is your ultimate health companion. It tracks your workouts, steps, and calorie intake using smart algorithms. With personalized fitness goals, daily motivation tips, and integration with wearables, it ensures you stay consistent and reach your health milestones.",
+    "size": 55,
+    "reviews": 950,
+    "ratingAvg": 4.2,
+    "downloads": 350000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 90 },
+      { "name": "3 star", "count": 130 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 370 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/W40JDKQK/note-ease.png",
+    "title": "NoteEase",
+    "companyName": "CloudNoted",
+    "id": 3,
+    "description": "NoteEase allows you to capture ideas instantly and access them anywhere. With real-time cloud sync, tag organization, and markdown support, it’s perfect for students, writers, and professionals who never want to lose their notes again.",
+    "size": 28,
+    "reviews": 2100,
+    "ratingAvg": 4.8,
+    "downloads": 800000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 160 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1380 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Y4vVtspD/photo-craft.png",
+    "title": "PhotoCraft",
+    "companyName": "Pixelverse Studio",
+    "id": 4,
+    "description": "PhotoCraft turns your photos into stunning artwork. Use AI-based filters, background removers, and lighting enhancements to make your pictures pop. Perfect for photographers, influencers, and anyone who loves creative editing on the go.",
+    "size": 67,
+    "reviews": 3500,
+    "ratingAvg": 4.6,
+    "downloads": 1200000,
+    "ratings": [
+      { "name": "1 star", "count": 90 },
+      { "name": "2 star", "count": 120 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 2290 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/hRG1hLm3/mind-zone.png",
+    "title": "MindZone",
+    "companyName": "Zenify Co",
+    "id": 5,
+    "description": "MindZone helps you calm your mind and improve focus. It includes guided meditations, breathing exercises, sleep stories, and mood trackers. Designed for both beginners and mindfulness experts, it brings peace to your daily routine.",
+    "size": 39,
+    "reviews": 1800,
+    "ratingAvg": 4.7,
+    "downloads": 600000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 45 },
+      { "name": "3 star", "count": 160 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 970 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/27YfdQ6X/shop-smart.webp",
+    "title": "ShopSmart",
+    "companyName": "EcomNext",
+    "id": 6,
+    "description": "ShopSmart lets you compare product prices across multiple online stores instantly. With built-in deal alerts, user reviews, and cashback offers, it’s the ultimate shopping assistant for saving money without compromising quality.",
+    "size": 48,
+    "reviews": 2300,
+    "ratingAvg": 4.3,
+    "downloads": 950000,
+    "ratings": [
+      { "name": "1 star", "count": 90 },
+      { "name": "2 star", "count": 180 },
+      { "name": "3 star", "count": 290 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 940 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/dZhnVHv/travelio.webp",
+    "title": "Travelio",
+    "companyName": "SkyPath",
+    "id": 7,
+    "description": "Travelio makes trip planning effortless. You can search flights, hotels, and activities in one place. The app provides real-time flight tracking, personalized recommendations, and secure bookings for a stress-free travel experience.",
+    "size": 70,
+    "reviews": 4100,
+    "ratingAvg": 4.4,
+    "downloads": 2000000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 220 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 1200 },
+      { "name": "5 star", "count": 2130 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Z1X3tC7Z/edu-pro.png",
+    "title": "EduPro",
+    "companyName": "Learnify",
+    "id": 8,
+    "description": "EduPro is a complete e-learning platform that connects learners with expert instructors. It offers courses across programming, business, design, and personal development with interactive lessons and certificates upon completion.",
+    "size": 80,
+    "reviews": 5600,
+    "ratingAvg": 4.9,
+    "downloads": 3200000,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 140 },
+      { "name": "3 star", "count": 260 },
+      { "name": "4 star", "count": 1100 },
+      { "name": "5 star", "count": 4020 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/HLm2GFd0/music-vibe.jpg",
+    "title": "MusicVibe",
+    "companyName": "TuneLab",
+    "id": 9,
+    "description": "MusicVibe lets you stream and discover millions of songs from around the world. Create playlists, follow your favorite artists, and enjoy high-quality audio with personalized recommendations based on your mood and taste.",
+    "size": 95,
+    "reviews": 10000,
+    "ratingAvg": 4.6,
+    "downloads": 8000000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 2400 },
+      { "name": "5 star", "count": 6200 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/9kj8cPFZ/weatherly.jpg",
+    "title": "Weatherly",
+    "companyName": "CloudSoft",
+    "id": 10,
+    "description": "Weatherly provides hyper-local weather forecasts, storm alerts, and live radar maps. With its clean interface and accurate predictions, you’ll always be prepared for your day whether it’s rain, shine, or snow.",
+    "size": 36,
+    "reviews": 850,
+    "ratingAvg": 4.1,
+    "downloads": 300000,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 110 },
+      { "name": "3 star", "count": 220 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 190 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/pvQ2DM14/langmate.png",
+    "title": "LangMate",
+    "companyName": "PolyLingua",
+    "id": 11,
+    "description": "LangMate helps you learn new languages through fun lessons and real conversations. Practice speaking with AI tutors, improve your vocabulary, and track progress with interactive challenges and daily streaks.",
+    "size": 62,
+    "reviews": 2750,
+    "ratingAvg": 4.7,
+    "downloads": 1500000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 210 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 1680 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/przx65Z6/budget-buddy.webp",
+    "title": "BudgetBuddy",
+    "companyName": "FinTrack Ltd",
+    "id": 12,
+    "description": "BudgetBuddy helps you manage your money smarter. Track expenses, set savings goals, and get weekly spending insights. With budget alerts and visual charts, staying financially organized has never been easier.",
+    "size": 33,
+    "reviews": 1800,
+    "ratingAvg": 4.5,
+    "downloads": 700000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 910 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/bMNSxQjZ/game-zone.jpg",
+    "title": "GameZone",
+    "companyName": "PlayLabs",
+    "id": 13,
+    "description": "GameZone is your all-in-one gaming hub. Explore new releases, read reviews, and join gaming communities. With personalized game recommendations and leaderboard rankings, every gamer finds their zone here.",
+    "size": 120,
+    "reviews": 9000,
+    "ratingAvg": 4.3,
+    "downloads": 5000000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 1300 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 3500 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/1xkZqM5/cook-book.jpg",
+    "title": "CookBook",
+    "companyName": "Chefify",
+    "id": 14,
+    "description": "CookBook offers thousands of chef-approved recipes with step-by-step instructions. Filter by cuisine, diet, or ingredients. Watch tutorial videos, create your own digital recipe book, and master cooking from your kitchen.",
+    "size": 77,
+    "reviews": 4100,
+    "ratingAvg": 4.8,
+    "downloads": 2200000,
+    "ratings": [
+      { "name": "1 star", "count": 70 },
+      { "name": "2 star", "count": 90 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 2840 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Q786TjpX/safe-net.jpg",
+    "title": "SafeNet",
+    "companyName": "CyberGuard",
+    "id": 15,
+    "description": "SafeNet protects your device from viruses, malware, and online threats. With secure browsing, real-time protection, and privacy monitoring, it keeps your data and identity safe on every connection.",
+    "size": 85,
+    "reviews": 2600,
+    "ratingAvg": 4.4,
+    "downloads": 1400000,
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 180 },
+      { "name": "3 star", "count": 280 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 1220 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Ndjz2ncd/book-hive.webp",
+    "title": "BookHive",
+    "companyName": "Readify",
+    "id": 16,
+    "description": "BookHive is a paradise for book lovers. Browse thousands of e-books, join reading clubs, and share reviews. It features offline reading, customizable themes, and AI-powered book suggestions based on your interests.",
+    "size": 60,
+    "reviews": 3100,
+    "ratingAvg": 4.9,
+    "downloads": 2500000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 2030 }
+    ]
+  }
+]
