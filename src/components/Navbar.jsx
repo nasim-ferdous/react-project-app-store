@@ -37,7 +37,7 @@ const Navbar = () => {
               <NavLink to={"/apps"}>Apps</NavLink>
             </li>
             <li>
-              <NavLink to={"/installation"}>Installation</NavLink>
+              <NavLink to={"/installation"}>My Installation</NavLink>
             </li>
           </ul>
         </div>
@@ -62,7 +62,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink to={"/installation"} className="font-bold">
-              Installation
+              My Installation
             </NavLink>
           </li>
         </ul>

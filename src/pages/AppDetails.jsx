@@ -100,7 +100,7 @@ const AppDetails = () => {
                 onClick={handleInstallBtn}
                 className="btn bg-[#00d390] text-white "
               >
-                Install Now ({size} MB)
+                {install ? "Installed" : `Install Now (${size} MB)`}
               </button>
               <ToastContainer
                 position="top-center"
