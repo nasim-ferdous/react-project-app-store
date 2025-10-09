@@ -17,7 +17,7 @@ const AppCard = ({ app }) => {
       <div className="card-body items-center text-center">
         <h2 className="card-title">{title}</h2>
       </div>
-      <div className=" flex justify-between p-8">
+      <div className=" flex justify-between p-5">
         <p className="btn flex gap-2 text-[#00d390]">
           <Download></Download>
           {downloads}

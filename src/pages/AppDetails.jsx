@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router";
 import useApps from "../hooks/useApps";
 import downloadImg from "../assets/fi_18110198.png";
@@ -15,8 +15,10 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { toast, ToastContainer } from "react-toastify";
 
 const AppDetails = () => {
+  const [install, setInstall] = useState(false);
   const { id } = useParams();
   const { apps, loading } = useApps();
   const app = apps.find((ap) => ap.id === Number(id));
@@ -35,11 +37,27 @@ const AppDetails = () => {
     ratings,
   } = app;
 
+  const handleInstallBtn = () => {
+    setInstall(true);
+    const existingApp = JSON.parse(localStorage.getItem("installed"));
+    let updatedApp = [];
+    if (existingApp) {
+      const isDouble = existingApp.some((a) => a.id === app.id);
+      if (isDouble) return toast.error("Already Installed");
+      updatedApp = [...existingApp, app];
+    } else {
+      updatedApp.push(app);
+    }
+
+    localStorage.setItem("installed", JSON.stringify(updatedApp));
+    toast.success("this app is installed");
+  };
+
   return (
     <div className="bg-gray-100">
       <div className="max-w-11/12 mx-auto py-10">
         {/* detail Card */}
-        <div className="card card-side bg-base-100 shadow-sm p-10">
+        <div className="card flex flex-col md:flex-row card-side bg-base-100 shadow-sm p-10">
           <figure className="h-82 overflow-hidden">
             <img className="w-full object-cover" src={image} alt="Movie" />
           </figure>
@@ -56,7 +74,7 @@ const AppDetails = () => {
               </div>
               <div className="divider"></div>
               <div className="card  rounded-box grid ">
-                <div className="flex gap-10">
+                <div className="flex flex-col md:flex-row gap-10">
                   <div className="space-y-3">
                     <img src={downloadImg} alt="download" />
                     <p>Downloads</p>
@@ -77,9 +95,17 @@ const AppDetails = () => {
             </div>
 
             <div className="card-actions mt-5 ">
-              <button className="btn bg-[#00d390] text-white ">
+              <button
+                disabled={install}
+                onClick={handleInstallBtn}
+                className="btn bg-[#00d390] text-white "
+              >
                 Install Now ({size} MB)
               </button>
+              <ToastContainer
+                position="top-center"
+                theme="colored"
+              ></ToastContainer>
             </div>
           </div>
         </div>
