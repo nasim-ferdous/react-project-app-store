@@ -3,11 +3,15 @@ import Banner from "../components/Banner";
 import useApps from "../hooks/useApps";
 import AppCard from "../components/appCard";
 import { Link } from "react-router";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const Home = () => {
-  const { apps } = useApps();
+  const { apps, loading } = useApps();
   // console.log(apps);
   const homeApp = apps.slice(0, 8);
+  if (loading) {
+    return <LoadingSpinner></LoadingSpinner>;
+  }
 
   return (
     <>

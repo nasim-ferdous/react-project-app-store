@@ -2,12 +2,19 @@ import React, { useEffect, useState } from "react";
 import downloadImg from "../assets/fi_18110198.png";
 import starImg from "../assets/star.png";
 import { toast, ToastContainer } from "react-toastify";
+import useApps from "../hooks/useApps";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const Installation = () => {
   const [installed, setInstalled] = useState([]);
   const [sort, setSort] = useState("none");
+  const { loading } = useApps;
   const installedApp = JSON.parse(localStorage.getItem("installed"));
   console.log(installedApp);
+
+  if (loading) {
+    return <LoadingSpinner></LoadingSpinner>;
+  }
 
   useEffect(() => {
     if (installedApp) return setInstalled(installedApp);

@@ -3,8 +3,16 @@ import playStoreLogo from "../assets/playStore.png";
 import appStoreLogo from "../assets/appStore.png";
 import heroImg from "../assets/hero.png";
 import { Link } from "react-router";
+import useApps from "../hooks/useApps";
 
 const Banner = () => {
+  const { apps } = useApps();
+  console.log(apps);
+  const totalDownload = (apps ?? []).reduce((acc, app) => {
+    acc + (app.downloads ?? 0);
+  }, 0);
+  console.log(totalDownload);
+
   return (
     <div>
       <div className="hero bg-base-200 min-h-screen ">

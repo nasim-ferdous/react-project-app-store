@@ -1,17 +1,18 @@
 import React from "react";
 import Footer from "../components/Footer";
-import { Outlet, useNavigation } from "react-router";
+import { Outlet } from "react-router";
 import Navbar from "../components/Navbar";
 import LoadingSpinner from "../components/LoadingSpinner";
+import useApps from "../hooks/useApps";
 
 const MainLayout = () => {
-  const navigation = useNavigation();
-  console.log(navigation.state);
+  const { loading } = useApps();
+  console.log(loading);
 
   return (
     <div className="flex flex-col min-h-screen ">
       <Navbar></Navbar>
-      {navigation?.state === "loading" ? (
+      {loading === true ? (
         <LoadingSpinner></LoadingSpinner>
       ) : (
         <div className="flex-1">

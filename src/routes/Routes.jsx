@@ -6,12 +6,14 @@ import Installation from "../pages/Installation";
 import AppDetails from "../pages/AppDetails";
 import ErrorPage from "../pages/ErrorPage";
 import ErrorPage2 from "../pages/ErrorPage2";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: MainLayout,
     errorElement: <ErrorPage></ErrorPage>,
+    hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>,
     children: [
       {
         index: true,

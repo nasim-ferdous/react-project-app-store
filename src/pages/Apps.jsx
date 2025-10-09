@@ -1,16 +1,41 @@
-import { Search } from "lucide-react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useApps from "../hooks/useApps";
 import AppCard from "../components/appCard";
-import { Link } from "react-router";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const Apps = () => {
   const [search, setSearch] = useState("");
-  const { apps } = useApps();
-  const term = search.trim().toLocaleLowerCase();
-  const searchedApp = term
-    ? apps.filter((app) => app.title.toLocaleLowerCase().includes(term))
-    : apps;
+  const { apps, loading } = useApps();
+  const [filteredApps, setFilteredApps] = useState([]);
+  const [searchLoading, setSearchLoading] = useState(false);
+
+  useEffect(() => {
+    if (apps.length > 0) setFilteredApps(apps);
+  }, [apps]);
+
+  useEffect(() => {
+    setSearchLoading(true);
+    const timer = setTimeout(() => {
+      const term = search.trim().toLowerCase();
+      const searchedApp = term
+        ? apps.filter((app) => app.title.toLowerCase().includes(term))
+        : apps;
+
+      setFilteredApps(searchedApp);
+      setSearchLoading(false);
+    }, 200);
+
+    return () => clearTimeout(timer);
+  }, [search, apps]);
+
+  if (loading) {
+    return <LoadingSpinner />;
+  }
+
+  // const term = search.trim().toLocaleLowerCase();
+  // const searchedApp = term
+  //   ? apps.filter((app) => app.title.toLocaleLowerCase().includes(term))
+  //   : apps;
   // console.log(searchedApp);
 
   return (
@@ -22,10 +47,9 @@ const Apps = () => {
         <p className="text-[#627382] text-center">
           Explore All Apps on the Market developed by us. We code for Millions
         </p>
-
         <div className="flex justify-between items-center mt-5">
           <p className="text-2xl font-semibold">
-            <span className="text-sm">({searchedApp.length}) </span>Apps Found
+            <span className="text-sm">({filteredApps.length}) </span>Apps Found
           </p>
           <label className="input">
             <input
@@ -36,17 +60,20 @@ const Apps = () => {
             />
           </label>
         </div>
-        {searchedApp.length !== 0 ? (
+        {searchLoading ? (
+          <LoadingSpinner />
+        ) : filteredApps.length !== 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8">
-            {searchedApp.map((app) => (
-              <AppCard key={app.id} app={app}></AppCard>
+            {filteredApps.map((app) => (
+              <AppCard key={app.id} app={app} />
             ))}
           </div>
         ) : (
-          <div className="text-5xl font-bold flex  justify-center items-center">
+          <div className="text-5xl font-bold flex justify-center items-center">
             <p>No App Found</p>
           </div>
         )}
+        ;
       </div>
     </div>
   );

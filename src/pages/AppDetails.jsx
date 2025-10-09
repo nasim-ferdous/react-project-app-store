@@ -16,14 +16,16 @@ import {
   YAxis,
 } from "recharts";
 import { toast, ToastContainer } from "react-toastify";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const AppDetails = () => {
   const [install, setInstall] = useState(false);
   const { id } = useParams();
   const { apps, loading } = useApps();
+
   const app = apps.find((ap) => ap.id === Number(id));
   if (loading) {
-    return <p>Loading....</p>;
+    return <LoadingSpinner></LoadingSpinner>;
   }
   const {
     image,
