@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import useApps from "../hooks/useApps";
 import downloadImg from "../assets/fi_18110198.png";
@@ -22,8 +22,14 @@ const AppDetails = () => {
   const [install, setInstall] = useState(false);
   const { id } = useParams();
   const { apps, loading } = useApps();
-
-  const app = apps.find((ap) => ap.id === Number(id));
+  const app = apps?.find((ap) => ap.id === Number(id));
+  useEffect(() => {
+    const installedApps = JSON.parse(localStorage.getItem("installed")) || [];
+    const isInstalled = installedApps.find((a) => a.id === app?.id);
+    if (isInstalled) {
+      setInstall(true);
+    }
+  }, [app?.id]);
   if (loading) {
     return <LoadingSpinner></LoadingSpinner>;
   }
@@ -38,7 +44,6 @@ const AppDetails = () => {
     description,
     ratings,
   } = app;
-
   const handleInstallBtn = () => {
     setInstall(true);
     const existingApp = JSON.parse(localStorage.getItem("installed"));
@@ -80,7 +85,7 @@ const AppDetails = () => {
                   <div className="space-y-3">
                     <img src={downloadImg} alt="download" />
                     <p>Downloads</p>
-                    <p className="text-4xl font-bold">{downloads}</p>
+                    <p className="text-4xl font-bold">{downloads / 1000000}M</p>
                   </div>
                   <div className="space-y-3">
                     <img src={starImg} alt="star" />

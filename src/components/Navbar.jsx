@@ -1,6 +1,5 @@
 import React from "react";
 import gitLogo from "../assets/fi_2111432.png";
-
 import logo from "../assets/logo.png";
 import { Link, NavLink } from "react-router";
 

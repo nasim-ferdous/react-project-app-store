@@ -3,9 +3,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const AppCard = ({ app }) => {
-  //   console.log(app);
   const { title, image, downloads, ratingAvg, id } = app;
-
   return (
     <Link
       to={`/app/${id}`}

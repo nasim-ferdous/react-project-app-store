@@ -7,8 +7,6 @@ import useApps from "../hooks/useApps";
 
 const MainLayout = () => {
   const { loading } = useApps();
-  console.log(loading);
-
   return (
     <div className="flex flex-col min-h-screen ">
       <Navbar></Navbar>
@@ -19,7 +17,6 @@ const MainLayout = () => {
           <Outlet></Outlet>
         </div>
       )}
-
       <Footer></Footer>
     </div>
   );

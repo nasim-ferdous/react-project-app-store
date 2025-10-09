@@ -9,17 +9,12 @@ const Installation = () => {
   const [installed, setInstalled] = useState([]);
   const [sort, setSort] = useState("none");
   const { loading } = useApps;
-  const installedApp = JSON.parse(localStorage.getItem("installed"));
-  console.log(installedApp);
-
-  if (loading) {
-    return <LoadingSpinner></LoadingSpinner>;
-  }
-
   useEffect(() => {
-    if (installedApp) return setInstalled(installedApp);
+    const installedApp = JSON.parse(localStorage.getItem("installed"));
+    if (installedApp?.length) {
+      setInstalled(installedApp);
+    }
   }, []);
-  // console.log(installed);
   const sortedApp = (() => {
     if (sort === "Size asc") {
       return [...installed].sort((a, b) => a.downloads - b.downloads);
@@ -36,6 +31,9 @@ const Installation = () => {
     localStorage.setItem("installed", JSON.stringify(updatedApp));
     toast.error("the app is Uninstalled");
   };
+  if (loading) {
+    return <LoadingSpinner></LoadingSpinner>;
+  }
   return (
     <div className="bg-gray-100">
       <div className="max-w-11/12 mx-auto py-10">
@@ -45,8 +43,7 @@ const Installation = () => {
         <p className="text-[#627382] text-center">
           Explore All Trending Apps on the Market developed by us
         </p>
-
-        <div className="flex justify-between items-center mt-5">
+        <div className="flex flex-col gap-2 md:flex-row justify-between items-center mt-5">
           <p className="text-2xl font-semibold">
             <span className="text-sm">({sortedApp.length}) </span>Apps Found
           </p>

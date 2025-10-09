@@ -8,11 +8,9 @@ const Apps = () => {
   const { apps, loading } = useApps();
   const [filteredApps, setFilteredApps] = useState([]);
   const [searchLoading, setSearchLoading] = useState(false);
-
   useEffect(() => {
     if (apps.length > 0) setFilteredApps(apps);
   }, [apps]);
-
   useEffect(() => {
     setSearchLoading(true);
     const timer = setTimeout(() => {
@@ -20,23 +18,14 @@ const Apps = () => {
       const searchedApp = term
         ? apps.filter((app) => app.title.toLowerCase().includes(term))
         : apps;
-
       setFilteredApps(searchedApp);
       setSearchLoading(false);
     }, 200);
-
     return () => clearTimeout(timer);
   }, [search, apps]);
-
   if (loading) {
     return <LoadingSpinner />;
   }
-
-  // const term = search.trim().toLocaleLowerCase();
-  // const searchedApp = term
-  //   ? apps.filter((app) => app.title.toLocaleLowerCase().includes(term))
-  //   : apps;
-  // console.log(searchedApp);
 
   return (
     <div className="bg-gray-100">
@@ -47,7 +36,7 @@ const Apps = () => {
         <p className="text-[#627382] text-center">
           Explore All Apps on the Market developed by us. We code for Millions
         </p>
-        <div className="flex justify-between items-center mt-5">
+        <div className="flex flex-col gap-2 md:flex-row justify-between items-center mt-5">
           <p className="text-2xl font-semibold">
             <span className="text-sm">({filteredApps.length}) </span>Apps Found
           </p>
@@ -73,7 +62,6 @@ const Apps = () => {
             <p>No App Found</p>
           </div>
         )}
-        ;
       </div>
     </div>
   );

@@ -7,11 +7,16 @@ import useApps from "../hooks/useApps";
 
 const Banner = () => {
   const { apps } = useApps();
-  console.log(apps);
-  const totalDownload = (apps ?? []).reduce((acc, app) => {
-    acc + (app.downloads ?? 0);
-  }, 0);
-  console.log(totalDownload);
+  const details = apps?.reduce(
+    (acc, app) => {
+      return {
+        ...acc,
+        totalDownload: acc.totalDownload + app.downloads,
+        reviews: acc.reviews + app.reviews,
+      };
+    },
+    { totalDownload: 0, reviews: 0 }
+  );
 
   return (
     <div>
@@ -54,17 +59,19 @@ const Banner = () => {
                 <div className="flex flex-col md:flex-row justify-between mt-8">
                   <div className="text-white space-y-3">
                     <p>Total Downloads</p>
-                    <p className="text-7xl">29.6M</p>
+                    <p className="text-7xl">
+                      {details.totalDownload / 1000000}M
+                    </p>
                     <p>21% more than last month</p>
                   </div>
                   <div className="text-white space-y-3">
                     <p>Total Reviews</p>
-                    <p className="text-7xl">906K</p>
+                    <p className="text-7xl">{details.reviews / 1000}K</p>
                     <p>46% more than last month</p>
                   </div>
                   <div className="text-white space-y-3">
                     <p>Active Apps</p>
-                    <p className="text-7xl">132+</p>
+                    <p className="text-7xl">{apps?.length}+</p>
                     <p>31 more will Launch</p>
                   </div>
                 </div>
