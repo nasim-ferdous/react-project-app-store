@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import useApps from "../hooks/useApps";
 import AppCard from "../components/appCard";
 import { Link } from "react-router";
-import ErrorPage from "./ErrorPage";
-import ErrorPage2 from "./ErrorPage2";
 
 const Apps = () => {
   const [search, setSearch] = useState("");
